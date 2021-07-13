@@ -32,7 +32,7 @@ class Notification {
 	 * @return [type] [description]
 	 */
 	public function register_notification( $notifications ) {
-		$notifications[ $this->slug ] = __( 'Redirect to New Post' );
+		$notifications[ $this->slug ] = __( 'Redirect to New Post', 'jet-forms-new-post-redirect-notification' );
 		return $notifications;
 	}
 

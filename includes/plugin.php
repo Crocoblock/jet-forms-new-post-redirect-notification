@@ -4,6 +4,8 @@
 namespace Jet_Forms_NPR;
 
 // If this file is called directly, abort.
+use Jet_Forms_NPR\Jet_Form_Builder\Action_Manager;
+
 if ( ! defined( 'WPINC' ) ) {
     die();
 }
@@ -24,6 +26,7 @@ class Plugin
     public static $instance = null;
 
     private $can_init = false;
+    public $is_new_post = false;
 
     public function __construct() {
         $this->can_init();
@@ -31,7 +34,7 @@ class Plugin
     }
 
     public function can_init() {
-        $this->can_init = function_exists( 'jet_engine' );
+        $this->can_init = function_exists( 'jet_engine' ) || function_exists( 'jet_form_builder' );
     }
 
     public function init() {
@@ -50,6 +53,7 @@ class Plugin
 
     public function init_components() {
         new Notification();
+        new Action_Manager();
     }
 
     /**
