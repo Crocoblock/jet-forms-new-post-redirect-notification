@@ -24,7 +24,7 @@ class Redirect_To_New_Post extends Base {
 	}
 
 	public function get_name() {
-		return __( 'Redirect to New Post', 'jet-forms-new-post-redirect-notification');
+		return __( 'Redirect to New Post', 'jet-forms-new-post-redirect-notification' );
 	}
 
 	public function do_action( array $request, Action_Handler $handler ) {
@@ -44,5 +44,17 @@ class Redirect_To_New_Post extends Base {
 			wp_safe_redirect( $url );
 			die();
 		}
+	}
+
+	public function visible_attributes_for_gateway_editor() {
+		return array();
+	}
+
+	public function self_script_name() {
+		return '';
+	}
+
+	public function editor_labels() {
+		return array();
 	}
 }
