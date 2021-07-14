@@ -2,8 +2,8 @@
 /**
  * Plugin Name: JetEngine Forms - new post redirect notification
  * Plugin URI:
- * Description:
- * Version:     1.0.0
+ * Description: Also supports JetFormBuilder.
+ * Version:     1.1.0
  * Author:      Crocoblock
  * Author URI:  https://crocoblock.com/
  * Text Domain: jet-forms-new-post-redirect-notification
@@ -22,7 +22,7 @@ add_action( 'plugins_loaded', 'jet_forms_new_post_redirect_notification' );
 
 function jet_forms_new_post_redirect_notification() {
 
-    define( 'JET_FORMS_NPR_NOTIFICATION_VERSION', '1.0.0' );
+    define( 'JET_FORMS_NPR_NOTIFICATION_VERSION', '1.1.0' );
 
     define( 'JET_FORMS_NPR_NOTIFICATION__FILE__', __FILE__ );
     define( 'JET_FORMS_NPR_NOTIFICATION_PLUGIN_BASE', plugin_basename( JET_FORMS_NPR_NOTIFICATION__FILE__ ) );
